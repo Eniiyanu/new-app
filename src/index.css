@@ -1,0 +1,34 @@
+.highlight{
+background-color: aquamarine;
+
+}
+.navbar-style{
+    background-color: blanchedalmond !important;
+}
+
+.green-highlight{
+    color: blueviolet;
+    font-size: 40px;
+}
+
+.red-highlight{
+    color: olivedrab;
+    font-size: 30px;
+}
+
+.buy{
+    float: right;
+}
+
+.quantity{
+    float: left;
+    color: #000; ;
+}
+
+.black{
+    color: #000; ;
+}
+
+.hand-icon{
+    cursor: pointer;
+}
