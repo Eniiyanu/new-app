@@ -66,14 +66,19 @@ export class ShoppingCart extends Component {
     }
   };
   // Handles Delete
+  // 1. find the index of the product to delete by looking up its index in the array
+  //    - use the findIndex() function to find the index of the product in the array
+  //    - if the product does not exist in the array, findIndex() will return -1
+  // 2. if the product exists in the array, remove it by slicing the array
+  //    - use the splice() function to remove the product from the array
+  //    - splice() takes the index of the product to remove and the number of products to remove
+
+  //    - splice() takes the index of the product to remove and the number of products to remove
   handleDelete = (product) => {
-    //console.log("handle decrement",product)
     let allProducts = [...this.state.products];
     let index = allProducts.indexOf(product);
-    //console.log(index);
-    if (window.confirm("Are you sure you want to remove from cart")) {
+    if (index >= 0) {
       allProducts.splice(index, 1);
-
       this.setState({ products: allProducts });
     }
   };
