@@ -1,0 +1,16 @@
+{
+  "products": [
+    { "id": 1, "productName": "Milk", "price": 1650, "quantity": 12 },
+    { "id": 2, "productName": "Chocolate", "price": 550, "quantity": 1 },
+    { "id": 3, "productName": "Biscuit", "price": 150, "quantity": 0 },
+    { "id": 4, "productName": "Candy", "price": 15, "quantity": 12 },
+    { "id": 5, "productName": "Noodles", "price": 150, "quantity": 120 },
+    { "id": 6, "productName": "Spaghetti", "price": 650, "quantity": 102 },
+    { "id": 7, "productName": "Eggs", "price": 100, "quantity": 6 },
+    { "id": 8, "productName": "Chips", "price": 50, "quantity": 19 }
+  ],
+  "users": [
+    { "id": 1, "email": "enii@gmail.com", "password": "eniiyanu" },
+    { "id": 2, "email": "eniiyanu@gmail.com", "password": "eniiyanu123" }
+  ]
+}

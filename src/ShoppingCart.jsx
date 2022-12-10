@@ -3,16 +3,7 @@ import { render } from "react-dom";
 import Product from "./Product";
 export class ShoppingCart extends Component {
   state = {
-    products: [
-      { id: 1, productName: "Milk", price: 1650, quantity: 12 },
-      { id: 2, productName: "Chocolate", price: 550, quantity: 1 },
-      { id: 3, productName: "Biscuit", price: 150, quantity: 0 },
-      { id: 4, productName: "Candy", price: 15, quantity: 12 },
-      { id: 5, productName: "Noodles", price: 150, quantity: 120 },
-      { id: 6, productName: "Spaghetti", price: 650, quantity: 102 },
-      { id: 7, productName: "Eggs", price: 100, quantity: 6 },
-      { id: 8, productName: "Chips", price: 50, quantity: 19 },
-    ],
+    products: [],
   };
 
   render() {
@@ -40,7 +31,25 @@ export class ShoppingCart extends Component {
     );
   }
   //render completed
+  componentDidMount = async () => {
+    var response = await fetch("http://localhost:5000/products", {
+      method: "GET",
+    });
+    var prods = await response.json();
+    console.log(prods);
+    this.setState({ products: prods });
 
+    // promise.then((response) => {
+    //   console.log(response);
+
+    //   var promise2 = response.json();
+    //   promise2.then((prods) => {
+    //     console.log(prods);
+
+    //     this.setState({products:prods});
+    //   });
+    // });
+  };
   handleIncrement = (product, maxValue) => {
     //console.log("handle increment" ,product)
     let allProducts = [...this.state.products];
