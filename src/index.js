@@ -21,16 +21,15 @@ import App from "./App";
 var element = <button className="btn btn-danger">Hello World</button>;
 ReactDOM.render(
   <BrowserRouter>
-  <Navbar />
-  <Routes path="/customers" exact component={CustomersList} />
-  <Routes path="/shoppingcart" exact component={ShoppingCart} />
-  <Routes path="/" exact component={Login} />
-  <Routes path="/dashboard" exact component={Dashboard} />
-  <Routes path="*"  component={NotFound} />
-  <ShoppingCart/>
-  <Dashboard/>
-  <Dashboard/>
-
-</BrowserRouter>,
+    <Navbar />
+    <Routes path="/customers" exact component={CustomersList} />
+    <Routes path="/shoppingcart" exact component={ShoppingCart} />
+    <Routes path="/dashboard" exact component={Dashboard} />
+    <Routes path="/" exact component={Login} />
+    <Routes path="*" component={NotFound} />
+    <ShoppingCart />
+    <Dashboard />
+    <Dashboard />
+  </BrowserRouter>,
   document.getElementById("root")
 );
